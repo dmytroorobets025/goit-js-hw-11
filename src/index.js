@@ -17,14 +17,14 @@ let searchName = '';
 searchForm.addEventListener('submit', onSearchFormSubmit);
 loadMoreBtn.addEventListener('click', onloadMoreBtnClick);
 
-function onSearchFormSubmit(e) {
+async function onSearchFormSubmit(e) {
   e.preventDefault();
 
   gallery.innerHTML = '';
   homePage();
   loadMoreBtn.classList.add('visually-hidden');
 
-  const { searchQuery } = e.target.elements;
+  const { searchQuery } = await e.target.elements;
   searchName = searchQuery.value.trim();
 
   getGallery(searchName)
