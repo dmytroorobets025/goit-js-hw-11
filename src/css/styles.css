@@ -6,7 +6,7 @@ body {
 }
 
 .container {
-  background: #3d3c3c;
+  background: blue;
   display: flex;
   align-items: center;
   justify-content: center;
